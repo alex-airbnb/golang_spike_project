@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.0.0...v1.1.0) (2020-12-17)
+
+
+### Features
+
+* Update the README file. ([#2](https://github.com/alex-airbnb/golang_spike_project/issues/2)) ([1b56547](https://github.com/alex-airbnb/golang_spike_project/commit/1b56547b67e51af8c2e17ce75df849078f3be50f))
+
 # 1.0.0 (2020-12-17)
 
 

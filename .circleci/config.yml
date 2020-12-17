@@ -1,0 +1,45 @@
+version: 2.1
+
+executors:
+  node:
+    docker:
+      - image: circleci/node:12.16.1
+  golang:
+    docker:
+      - image: circleci/golang:1.15.6
+
+jobs:
+  generate_release:
+    executor: node
+    steps:
+      - checkout
+      - run:
+          name: 'Generate Release'
+          command: |
+            sudo npm i -g @semantic-release/changelog @semantic-release/git semantic-release
+            semantic-release
+
+  run_tests:
+    executor: golang
+    steps:
+      - checkout
+      - run:
+          name: 'Run Tests'
+          command: make test
+
+workflows:
+  version: 2
+
+  development:
+    jobs:
+      - run_tests:
+          filters:
+            branches:
+              ignore: master
+
+  production:
+    jobs:
+      - generate_release:
+          filters:
+            branches:
+              only: master

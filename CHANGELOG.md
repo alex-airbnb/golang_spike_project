@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.1.0...v1.2.0) (2020-12-22)
+
+
+### Features
+
+* Add Codacy Badge to the README file. ([ecedaf6](https://github.com/alex-airbnb/golang_spike_project/commit/ecedaf68fec02ae0a94cfef5987952baba769494))
+* Add CodeCov Badge to the README file. ([be2fbfd](https://github.com/alex-airbnb/golang_spike_project/commit/be2fbfd2c1cec377353c44e4fb4c1accc176bdbd))
+* Add coverage to the Makefile. ([3ed0eda](https://github.com/alex-airbnb/golang_spike_project/commit/3ed0edafd66782fa5c2642639b79f91b59ab09a1))
+* Add format and lint to the Makefile. ([0849399](https://github.com/alex-airbnb/golang_spike_project/commit/0849399bc2171f8aaad681d29de1872452756cb9))
+* Add run_codecov job to the CircleCI config. ([661967d](https://github.com/alex-airbnb/golang_spike_project/commit/661967d822880908471e255e4f65c4a86365ed7f))
+* Add run_linter job to the CircleCI config. ([f79c445](https://github.com/alex-airbnb/golang_spike_project/commit/f79c4451ea0bebc3d55ac56b77b90027ef169975))
+
 # [1.1.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.0.0...v1.1.0) (2020-12-17)
 
 

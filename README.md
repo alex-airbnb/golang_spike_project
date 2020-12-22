@@ -2,7 +2,7 @@
 
 A spike project to explore the best way to build a Golang project.
 
-[![<alex-airbnb>](https://circleci.com/gh/alex-airbnb/golang_spike_project.svg?style=svg)](https://circleci.com/github/alex-airbnb/golang_spike_project)
+[![<alex-airbnb>](https://circleci.com/gh/alex-airbnb/golang_spike_project.svg?style=svg)](https://circleci.com/github/alex-airbnb/golang_spike_project) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/37df25183bf146bd8539e36a0f459a2c)](https://app.codacy.com/gh/alex-airbnb/golang_spike_project?utm_source=github.com&utm_medium=referral&utm_content=alex-airbnb/golang_spike_project&utm_campaign=Badge_Grade)
 
 ## Table of Contents
 

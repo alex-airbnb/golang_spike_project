@@ -1,5 +1,5 @@
 coverage:
-	go test -race -coverprofile=coverage.txt -covermode=atomic ./...
+	go test ./... -coverprofile=coverage.txt -covermode=atomic
 
 format:
 	gofmt -w ./..

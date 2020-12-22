@@ -19,6 +19,14 @@ jobs:
             sudo npm i -g @semantic-release/changelog @semantic-release/git semantic-release
             semantic-release
 
+  run_linter:
+    executor: golang
+    steps:
+      - checkout
+      - run:
+          name: 'Run Linter'
+          command: make lint
+
   run_tests:
     executor: golang
     steps:
@@ -32,6 +40,10 @@ workflows:
 
   development:
     jobs:
+      - run_linter:
+          filters:
+            branches:
+              ignore: master
       - run_tests:
           filters:
             branches:

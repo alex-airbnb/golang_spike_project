@@ -23,6 +23,18 @@ make install
 
 ## Usage
 
+### Run Formatter
+
+```sh
+make format
+```
+
+### Run Linter
+
+```sh
+make lint
+```
+
 ### Run Tests
 
 ```sh

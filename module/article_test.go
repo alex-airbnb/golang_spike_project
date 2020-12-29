@@ -3,29 +3,39 @@ package module
 import (
 	"testing"
 
+	"github.com/alex-airbnb/golang_spike_project/model"
 	"github.com/franela/goblin"
-
-	"github.com/alex-airbnb/golang_spike_project/adapter"
-	"github.com/alex-airbnb/golang_spike_project/entity"
+	"github.com/stretchr/testify/mock"
 )
+
+type postgresAdapterMock struct {
+	mock.Mock
+}
+
+func (mock *postgresAdapterMock) Create(item interface{}) error {
+	args := mock.Called(item)
+
+	return args.Error(0)
+}
 
 func Test(t *testing.T) {
 	g := goblin.Goblin(t)
 
 	g.Describe("Article Module", func() {
-		g.Describe("AddArticle", func() {
-			g.Describe("when receives name and content", func() {
-				g.It("it should create a new post", func() {
-					article := entity.Article{
-						Name:    "ArticleName",
-						Content: "ArticleContent",
-					}
-					externalStorageAdapter := adapter.ExternalStorageFake{}
+		g.Describe("CreateArticle", func() {
+			g.It("should create a new article with the specified name and content", func() {
+				expectedArticle := &model.Article{
+					Name:    "Article Name",
+					Content: "Article Content",
+				}
+				adapter := &postgresAdapterMock{}
 
-					currentArticles := CreateArticle(article, externalStorageAdapter)
+				adapter.On("Create", expectedArticle).Return(nil)
 
-					g.Assert(len(currentArticles)).Equal(1)
-				})
+				currentArticle, currentErr := CreateArticle(expectedArticle, adapter)
+
+				g.Assert(currentArticle).Equal(expectedArticle)
+				g.Assert(currentErr).Equal(nil)
 			})
 		})
 	})

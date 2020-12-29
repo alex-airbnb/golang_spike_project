@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.2.0...v1.3.0) (2020-12-29)
+
+
+### Features
+
+* Add Article model. ([2404be3](https://github.com/alex-airbnb/golang_spike_project/commit/2404be360cc07f1d63a1e5cdc81a27d3fd8c7255))
+* Add database package. ([e4b3999](https://github.com/alex-airbnb/golang_spike_project/commit/e4b3999524b5291ba8a9ee72f3ecac10575115ff))
+* Add docker-compose file to run a postgres container. ([2bd6efc](https://github.com/alex-airbnb/golang_spike_project/commit/2bd6efcb0b0a8e0d9276edff4e4bde65555382fe))
+* Add godotenv and gorm packages. ([23e1e03](https://github.com/alex-airbnb/golang_spike_project/commit/23e1e038c083722094e19f3a2b88a03d860de6c1))
+* Ignore the .env file. ([ce63d3f](https://github.com/alex-airbnb/golang_spike_project/commit/ce63d3fe381e5c3c986257d198fa8466059acd1b))
+* Load the environment variables from the .env file. ([ad1e406](https://github.com/alex-airbnb/golang_spike_project/commit/ad1e40647fb6646f468072543c398d24a3d85130))
+
 # [1.2.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.1.0...v1.2.0) (2020-12-22)
 
 

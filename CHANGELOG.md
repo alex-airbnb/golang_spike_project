@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/alex-airbnb/golang_spike_project/compare/v1.3.0...v1.3.1) (2021-01-13)
+
+
+### Performance Improvements
+
+* Add Postgres adapter. ([f07875a](https://github.com/alex-airbnb/golang_spike_project/commit/f07875a512de6b55124074f61b5427354890707c))
+
 # [1.3.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.2.0...v1.3.0) (2020-12-29)
 
 

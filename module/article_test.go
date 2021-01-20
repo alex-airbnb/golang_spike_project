@@ -18,7 +18,7 @@ func (mock *postgresAdapterMock) Create(item interface{}) error {
 	return args.Error(0)
 }
 
-func Test(t *testing.T) {
+func TestArticleModule(t *testing.T) {
 	g := goblin.Goblin(t)
 
 	g.Describe("Article Module", func() {

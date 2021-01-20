@@ -15,7 +15,6 @@ func CreateArticleHandler(writer http.ResponseWriter, request *http.Request) {
 	var article model.Article
 
 	adapter := adapter.Postgres{DB: database.SetUp()}
-
 	err := json.NewDecoder(request.Body).Decode(&article)
 
 	if err != nil {
@@ -29,6 +28,8 @@ func CreateArticleHandler(writer http.ResponseWriter, request *http.Request) {
 	}
 
 	writer.Header().Set("Content-Type", "application/json")
+
 	writer.WriteHeader(http.StatusCreated)
+
 	json.NewEncoder(writer).Encode(createdArticle)
 }

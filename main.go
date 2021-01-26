@@ -8,10 +8,17 @@ import (
 	"os/signal"
 	"time"
 
+	"github.com/alex-airbnb/golang_spike_project/database"
 	"github.com/alex-airbnb/golang_spike_project/router"
 )
 
 func main() {
+	err := database.SetUpPostgres()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	muxRouter := router.GetRouter()
 
 	server := http.Server{

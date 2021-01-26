@@ -15,21 +15,28 @@ func migrate(db *gorm.DB) {
 	db.AutoMigrate(&model.Article{})
 }
 
-// SetUp Set up the connection with the Postgres DB.
-func SetUp() *gorm.DB {
+// PostgresDB Instance of the Postgres DB
+var PostgresDB *gorm.DB
+
+// SetUpPostgres Set up the connection with the Postgres DB.
+func SetUpPostgres() error {
 	err := godotenv.Load()
 
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		return err
 	}
 
-	db, err := gorm.Open(postgres.Open(os.Getenv("DB_URL")), &gorm.Config{})
+	PostgresDB, err := gorm.Open(postgres.Open(os.Getenv("DB_URL")), &gorm.Config{})
 
 	if err != nil {
 		log.Fatal("Error to connect to the database")
+
+		return err
 	}
 
-	migrate(db)
+	log.Print("Set up PostgresDB")
 
-	return db
+	migrate(PostgresDB)
+
+	return nil
 }

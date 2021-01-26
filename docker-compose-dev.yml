@@ -1,16 +1,6 @@
 version: "3.9"
 
 services:
-  api-service:
-    build: .
-    restart: always
-    ports:
-      - 8000:8000
-    environment:
-      DB_URL: 'host=localhost user=postgres_user password=postgres_password_2020 dbname=postgres_local_db port=5432'
-    depends_on:
-      - postgres
-
   postgres:
     image: postgres:13.1
     restart: always

@@ -9,6 +9,7 @@ A spike project to explore the best way to build a Golang project.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Docker Compuse Usage](#docker-compose-usage)
 - [License](#license)
 
 ## Requirements

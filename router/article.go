@@ -14,7 +14,7 @@ import (
 func CreateArticleHandler(writer http.ResponseWriter, request *http.Request) {
 	var article model.Article
 
-	adapter := adapter.Postgres{DB: database.SetUp()}
+	adapter := adapter.Postgres{DB: database.PostgresDB}
 	err := json.NewDecoder(request.Body).Decode(&article)
 
 	if err != nil {

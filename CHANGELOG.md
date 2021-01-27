@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/alex-airbnb/golang_spike_project/compare/v1.3.1...v1.4.0) (2021-01-27)
+
+
+### Features
+
+* Add CreateArticle handler. ([974dfe0](https://github.com/alex-airbnb/golang_spike_project/commit/974dfe080e0a5d7190f4867ac7e5b5e078c9a594))
+* Add docker-compose-dev and docker-compose files. ([63c7c2c](https://github.com/alex-airbnb/golang_spike_project/commit/63c7c2c452682cc0fc07e4b9a692a650e8dc53df))
+* Add Dockerfile. ([bbaf56a](https://github.com/alex-airbnb/golang_spike_project/commit/bbaf56a835de42297eb466167ee620075303b59d))
+* Add GetRouter to set up a new mux server. ([8ae36b7](https://github.com/alex-airbnb/golang_spike_project/commit/8ae36b7c8202efb13d6951890ca54666d546e8cc))
+* Add mux package. ([c035ce6](https://github.com/alex-airbnb/golang_spike_project/commit/c035ce665c5bf1336db9641cf163f60fbffd58b8))
+* Add PostgresDB variable and SetUpPostgres function to initialize the connection with Postgres. ([46a1a6d](https://github.com/alex-airbnb/golang_spike_project/commit/46a1a6d2109ede17c3ba2bce4cfde4cc6b6d8775))
+* Add server. ([69c7d43](https://github.com/alex-airbnb/golang_spike_project/commit/69c7d43c10af559cae8a2d46cf183dee0a3a2e45))
+
 ## [1.3.1](https://github.com/alex-airbnb/golang_spike_project/compare/v1.3.0...v1.3.1) (2021-01-13)
 
 

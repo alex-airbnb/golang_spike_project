@@ -8,15 +8,15 @@ import (
 
 // Article DB Entity to manage the Article data and also work as model for Gorm.
 type Article struct {
-	Content   string         `json:"content"`
-	CreatedAt time.Time      `json:"createdAt"`
-	DeletedAt gorm.DeletedAt `json:"deletedAt" gorm:"index"`
-	ID        uint           `json:"id" gorm:"primarykey"`
-	Name      string         `json:"name"`
-	UpdatedAt time.Time      `json:"updatedAt"`
+	Content   string
+	CreatedAt time.Time
+	DeletedAt gorm.DeletedAt `gorm:"index"`
+	ID        uint           `gorm:"primarykey"`
+	Name      string
+	UpdatedAt time.Time
 }
 
 // CreateArticle Creates a new article.
-func CreateArticle(name, content string) (Article, error) {
-	return Article{Name: name, Content: content}, nil
+func CreateArticle(n, c string) (Article, error) {
+	return Article{Name: n, Content: c}, nil
 }

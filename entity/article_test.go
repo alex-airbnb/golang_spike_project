@@ -11,7 +11,7 @@ func TestArticleEntity(t *testing.T) {
 
 	g.Describe("Article Entity", func() {
 		g.Describe("CreateArticle", func() {
-			g.It("should create a new article with the specified name and content", func() {
+			g.It("It should create a new article with the specified name and content", func() {
 				articleName := "Article Name"
 				articleContent := "Article Content"
 				expectedArticle := Article{Name: articleName, Content: articleContent}

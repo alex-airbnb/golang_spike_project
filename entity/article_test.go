@@ -16,7 +16,7 @@ func TestArticleEntity(t *testing.T) {
 				articleContent := "Article Content"
 				expectedArticle := Article{Name: articleName, Content: articleContent}
 
-				currentArticle, err := CreateArticle(articleName, articleContent)
+				currentArticle, err := CreateArticle(articleContent, articleName)
 
 				g.Assert(currentArticle).Equal(expectedArticle)
 				g.Assert(err).Equal(nil)

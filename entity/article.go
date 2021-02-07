@@ -17,6 +17,6 @@ type Article struct {
 }
 
 // CreateArticle Creates a new article.
-func CreateArticle(n, c string) (Article, error) {
-	return Article{Name: n, Content: c}, nil
+func CreateArticle(content, name string) (Article, error) {
+	return Article{Content: content, Name: name}, nil
 }
